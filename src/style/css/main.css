@@ -22,6 +22,7 @@ body {
 .app-container {
   min-height: 896px;
   min-width: 414px;
+  max-width: 414px;
   border: 1px solid #4e4e4e;
   border-radius: 2.5rem;
   overflow: hidden;
@@ -218,7 +219,7 @@ body {
     font-weight: 500; }
     .controls__heading .title span {
       font-size: 1.7rem;
-      color: #ccc; }
+      color: #999999; }
 
 .controls .edit {
   border: 0.2rem solid #414141;
@@ -228,6 +229,22 @@ body {
   .controls .edit:hover {
     background-color: #fff;
     color: #585858; }
+
+.devices-wrapper .device__col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; }
+  .devices-wrapper .device__col .device {
+    width: 49%;
+    min-height: 8.5rem;
+    max-height: 17rem;
+    background-color: #2A2A2A;
+    padding: 1.2rem;
+    border-radius: .8rem; }
+  .devices-wrapper .device__col .device:nth-of-type(odd) {
+    margin-bottom: 1rem; }
+  .devices-wrapper .device__col .device:nth-of-type(even) {
+    margin-bottom: 1rem; }
 
 .dashboard {
   background-color: #1D1D1D; }

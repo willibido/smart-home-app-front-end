@@ -1,0 +1,26 @@
+.devices-wrapper {
+    
+    .device__col {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+        .device {
+            width: 49%;
+            min-height: 8.5rem;
+            max-height: 17rem;
+            background-color: $tertiary-color;
+            padding: 1.2rem;
+            border-radius: .8rem;
+        }
+
+        .device:nth-of-type(odd) {
+            // margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .device:nth-of-type(even) {
+            margin-bottom: 1rem;
+        }
+    }
+}
