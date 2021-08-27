@@ -1,21 +1,71 @@
 .devices-wrapper {
-    
+    display: flex;
+    justify-content: space-between;
+    // overflow: scroll;
+
     .device__col {
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         justify-content: space-between;
+        width: 49%;
+        height: 100%;
         
         .device {
-            width: 49%;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+            width: 100%;
             min-height: 8.5rem;
             max-height: 17rem;
-            background-color: $tertiary-color;
+            background-color: rgba($tertiary-color, .4);
             padding: 1.2rem;
             border-radius: .8rem;
+            cursor: pointer;
+            transition: all .2s ease-in;
+
+            &:hover {
+                background-color: rgba($tertiary-color, .8);
+            }
+
+            &__icon {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $tertiary-color;
+                padding: 2.5rem;
+                border-radius: 5rem;
+                max-width: 4rem;
+                max-height: 4rem;
+                font-size: 2rem;
+            }
+
+            &__info {
+                margin-left: 1.5rem;
+                .name {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    margin-bottom: .9rem;
+                }
+
+                .status {
+                    font-size: 1.2rem;
+                    color: #ccc;
+                }
+            }
+        }
+
+        .device--extended {
+            min-height: 18rem;
+            align-items: flex-start;
+            flex-direction: column;
+
+            .wrapper {
+                display: flex;
+            }
         }
 
         .device:nth-of-type(odd) {
-            // margin-right: 1rem;
             margin-bottom: 1rem;
         }
 

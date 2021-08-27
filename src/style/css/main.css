@@ -230,21 +230,59 @@ body {
     background-color: #fff;
     color: #585858; }
 
-.devices-wrapper .device__col {
+.devices-wrapper {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between; }
-  .devices-wrapper .device__col .device {
+  .devices-wrapper .device__col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 49%;
-    min-height: 8.5rem;
-    max-height: 17rem;
-    background-color: #2A2A2A;
-    padding: 1.2rem;
-    border-radius: .8rem; }
-  .devices-wrapper .device__col .device:nth-of-type(odd) {
-    margin-bottom: 1rem; }
-  .devices-wrapper .device__col .device:nth-of-type(even) {
-    margin-bottom: 1rem; }
+    height: 100%; }
+    .devices-wrapper .device__col .device {
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      width: 100%;
+      min-height: 8.5rem;
+      max-height: 17rem;
+      background-color: rgba(42, 42, 42, 0.4);
+      padding: 1.2rem;
+      border-radius: .8rem;
+      cursor: pointer;
+      transition: all .2s ease-in; }
+      .devices-wrapper .device__col .device:hover {
+        background-color: rgba(42, 42, 42, 0.8); }
+      .devices-wrapper .device__col .device__icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #2A2A2A;
+        padding: 2.5rem;
+        border-radius: 5rem;
+        max-width: 4rem;
+        max-height: 4rem;
+        font-size: 2rem; }
+      .devices-wrapper .device__col .device__info {
+        margin-left: 1.5rem; }
+        .devices-wrapper .device__col .device__info .name {
+          font-size: 1.8rem;
+          font-weight: 500;
+          margin-bottom: .9rem; }
+        .devices-wrapper .device__col .device__info .status {
+          font-size: 1.2rem;
+          color: #ccc; }
+    .devices-wrapper .device__col .device--extended {
+      min-height: 18rem;
+      align-items: flex-start;
+      flex-direction: column; }
+      .devices-wrapper .device__col .device--extended .wrapper {
+        display: flex; }
+    .devices-wrapper .device__col .device:nth-of-type(odd) {
+      margin-bottom: 1rem; }
+    .devices-wrapper .device__col .device:nth-of-type(even) {
+      margin-bottom: 1rem; }
 
 .dashboard {
   background-color: #1D1D1D; }
