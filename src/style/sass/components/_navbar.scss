@@ -1,0 +1,20 @@
+.navbar {
+    position: absolute;
+    background-color: $navbar-color;
+    height: 120px;
+    width: 100%;
+    bottom: 0%;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+    padding: 2rem;
+
+    &__controls-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__controls{
+        display: flex;
+    }
+}

@@ -1,0 +1,53 @@
+.btn {
+    background-color: $tertiary-color;
+    cursor: pointer;
+    border: none;
+    padding: 2rem;
+
+    min-width: 6rem;
+    min-height: 5.8rem;
+    color: $font-color;
+    
+    transition: background .4s ease;
+    font-size: $font-size-medium;
+    font-weight: 600;
+    border: 2px solid transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: #fff;
+        color: #292929;
+    }
+
+    &--extended{
+        padding: 2rem 1rem;
+        min-width: 16rem;
+    }
+
+    &--round{
+        border-radius: 5rem;
+    }
+
+    &--bordered {
+        border: $simple-border;
+        transition: border .8s ease;
+    }
+
+    &--recorder:hover {
+        background-color: $red-color;
+        color: #fff;
+        border-color: $red-color;
+    }
+
+    &--small {
+        padding: 1.2rem;
+        min-width: 1rem;
+        min-height: 1rem;
+    }
+
+    i {
+        font-size: $font-size-medium;
+    }
+}

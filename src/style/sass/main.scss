@@ -1,0 +1,17 @@
+@import 'abstract/variables';
+
+// Base style
+@import 'base/animations';
+@import 'base/typography';
+@import 'base/base';
+@import 'base/utilites';
+
+// Components
+@import 'components/navbar';
+@import 'components/buttom';
+@import 'components/dashboard-head';
+@import 'components/scene';
+@import 'components/controls';
+
+// Layout
+@import 'layout/container';

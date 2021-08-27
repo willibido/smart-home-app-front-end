@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style/css/main.css">
+    <link rel="stylesheet" href="src/style/css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6dd4a30c4e.js" crossorigin="anonymous"></script>
+    <title>MOBILE APP</title>
+</head>
+<body>
+    <div class="app-container u-margin-top-medium">
+        <div class="inner-container">
+            <!-- NAVEGATION BAR -->
+            <nav class="navbar">
+                <div class="navbar__controls-container">
+                    <div class="control">
+                        <button class="btn btn--extended btn--round"><i class="fas fa-home"></i> Room</button>
+                    </div>
+                    <div class="control">
+                        <button class="btn btn--round"><i class="fas fa-video"></i></button>
+                    </div>
+                    <div class="control">
+                        <button class="btn btn--round"><i class="fas fa-sitemap"></i></button>
+                    </div>
+                    <div class="control">
+                        <button class="btn btn--round btn--bordered btn--recorder"><i class="fas fa-microphone sized"></i></button>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- MAIN CONTENT -->
+            <section class="dashboard u-margin-bottom-small">
+                <section class="dashboard__head u-both-sides-p">
+                    <div class="dashboard__head__top-bar u-margin-bottom-small">
+                        <button class="btn btn--round btn--small"><i class="fas fa-chevron-down"></i></button>
+                        <span class="time"><i class="fas fa-moon"></i> Oct.26th</span>
+                        <div class="user-account">
+                            <img class="avatar" src="src/assets/img/avatar.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="dashboard__head__title u-margin-bottom-small">
+                        <p>Good night,</p>
+                        <p id="user_name" class="user-name">Willi Bidó.</p>
+                    </div>
+
+                    <div class="dashboard__head__scenes">
+                        <p class="u-margin-bottom-small">Scenes</p>
+
+                        <div class="scenes-container">
+                            <ul class="scenes">
+                                <li class="scene">
+                                    <div class="scene__icon u-bg-red">
+                                        <i class="fas fa-music"></i>
+                                    </div>
+                                    <p class="scene__name">Music</p>
+                                </li>
+
+                                <li class="scene">
+                                    <div class="scene__icon u-bg-blue">
+                                        <i class="fas fa-running"></i>
+                                    </div>
+                                    <p class="scene__name">Run</p>
+                                </li>
+
+                                <li class="scene">
+                                    <div class="scene__icon u-bg-violet">
+                                        <i class="fas fa-moon"></i>
+                                    </div>
+                                    <p class="scene__name">Night</p>
+                                </li>
+
+                                <li class="scene">
+                                    <div class="scene__icon u-bg-green">
+                                        <i class="fas fa-film"></i>
+                                    </div>
+                                    <p class="scene__name">Movie</p>
+                                </li>
+
+                                <li class="scene">
+                                    <div class="scene__icon u-bg-orange">
+                                        <i class="fas fa-bed"></i>
+                                    </div>
+                                    <p class="scene__name">Sleep</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            
+            <!-- CONTROLS -->
+            <section class="controls u-both-sides-p">
+                <div class="controls__heading">
+                    <div class="title">
+                        <p>Livin Room</p>
+                        <span>7 Devices</span>
+                    </div>
+                    <span class="edit">Edit</span>
+                </div>
+
+                <div class="components">
+
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

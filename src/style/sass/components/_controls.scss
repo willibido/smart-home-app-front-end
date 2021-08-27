@@ -1,0 +1,29 @@
+.controls {
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .title {
+            font-size: 2.2rem;
+            font-weight: 500;
+
+            span {
+                font-size: 1.7rem;
+                color: #ccc;
+            }
+        }
+    }
+
+    .edit {
+        border: $simple-border;
+        padding: .6rem 1.8rem;
+        border-radius: 2rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+            color: #585858;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "mobile-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass -o src/style/css src/style/sass/main.scss -w -r"
+  },
+  "author": "Willi Bido",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "normalize.css": "^8.0.1"
+  },
+  "dependencies": {}
+}
