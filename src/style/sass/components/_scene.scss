@@ -17,7 +17,7 @@
         cursor: pointer;
         transition: 
             background .2s ease,
-            transform .4s cubic-bezier(0.87, 0, 0.13, 1)
+            transform .3s cubic-bezier(0.87, 0, 0.13, 1)
         ;
 
         &:hover {
@@ -28,12 +28,6 @@
         &__name {
             font-weight: 500;
         }
-        
-        // &:hover {
-        //     .scene__name {
-        //         color: #585858;
-        //     }
-        // }
 
         &__icon {
             display: flex;
@@ -46,5 +40,66 @@
             height: 5.7rem;
             width: 5.7rem;
         }
+        
+        &.movie.active {
+            background-color: $green-color;
+
+            .scene__icon {
+                background-color: $navbar-color !important;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+
+        &.music.active {
+            background-color: $red-color;
+
+            .scene__icon {
+                background-color: $navbar-color !important;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+
+        &.night.active {
+            background-color: $violet-color;
+
+            .scene__icon {
+                background-color: $navbar-color !important;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+        
+        &.run.active {
+            background-color: $primary-color;
+
+            .scene__icon {
+                background-color: $navbar-color !important;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }
+        
+        &.sleep.active {
+            background-color: $orange-color;
+
+            .scene__icon {
+                background-color: $navbar-color !important;
+
+                i {
+                    color: #fff;
+                }
+            }
+        }        
     }
+
 }

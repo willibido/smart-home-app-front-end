@@ -145,6 +145,8 @@ body {
     min-height: 1rem; }
   .btn i {
     font-size: 1.6rem; }
+  .btn i.fas.fa-home {
+    margin-right: 1rem; }
 
 .dashboard {
   border-bottom-left-radius: 3rem;
@@ -193,7 +195,7 @@ body {
     padding-bottom: 2rem;
     border-radius: 5rem;
     cursor: pointer;
-    transition: background 0.2s ease, transform 0.4s cubic-bezier(0.87, 0, 0.13, 1); }
+    transition: background 0.2s ease, transform 0.3s cubic-bezier(0.87, 0, 0.13, 1); }
     .scenes .scene:hover {
       background-color: #ffffff2a;
       transform: translateY(-1rem); }
@@ -209,6 +211,36 @@ body {
       margin-bottom: 2rem;
       height: 5.7rem;
       width: 5.7rem; }
+    .scenes .scene.movie.active {
+      background-color: #00C853; }
+      .scenes .scene.movie.active .scene__icon {
+        background-color: #1D1D1D !important; }
+        .scenes .scene.movie.active .scene__icon i {
+          color: #fff; }
+    .scenes .scene.music.active {
+      background-color: #F44336; }
+      .scenes .scene.music.active .scene__icon {
+        background-color: #1D1D1D !important; }
+        .scenes .scene.music.active .scene__icon i {
+          color: #fff; }
+    .scenes .scene.night.active {
+      background-color: #651FFF; }
+      .scenes .scene.night.active .scene__icon {
+        background-color: #1D1D1D !important; }
+        .scenes .scene.night.active .scene__icon i {
+          color: #fff; }
+    .scenes .scene.run.active {
+      background-color: #3D5AFE; }
+      .scenes .scene.run.active .scene__icon {
+        background-color: #1D1D1D !important; }
+        .scenes .scene.run.active .scene__icon i {
+          color: #fff; }
+    .scenes .scene.sleep.active {
+      background-color: #FF9100; }
+      .scenes .scene.sleep.active .scene__icon {
+        background-color: #1D1D1D !important; }
+        .scenes .scene.sleep.active .scene__icon i {
+          color: #fff; }
 
 .controls__heading {
   display: flex;
