@@ -30,29 +30,39 @@ let scenes = document.querySelectorAll('.scene');
 
 scenes.forEach(scene => {
     scene.addEventListener('click', () => {
-        scenes.forEach(el => {
-            el.classList.remove('active');
-        })
+        scene.classList.toggle('active');
 
-        if (scene.classList.contains('movie')) {
-            scene.classList.add('active');
-        }
+        console.log(scene.classList.contains('active'));
 
-        if (scene.classList.contains('music')) {
-            scene.classList.add('active');
-        }
+        // if (scenes.classList.contains('active') > 1) {
+        //     scenes.forEach(el => {
+        //         el.classList.remove('active');
+        //     })
+        // }
+        
+        // scenes.forEach(el => {
+        //     el.classList.toggle('active');
+        // })
 
-        if (scene.classList.contains('run')) {
-            scene.classList.add('active');
-        }
+        // if (scene.classList.contains('movie')) {
+        //     scene.classList.add('active');
+        // }
 
-        if (scene.classList.contains('sleep')) {
-            scene.classList.add('active');
-        }
+        // if (scene.classList.contains('music')) {
+        //     scene.classList.add('active');
+        // }
 
-        if (scene.classList.contains('night')) {
-            scene.classList.add('active');
-        }
+        // if (scene.classList.contains('run')) {
+        //     scene.classList.add('active');
+        // }
+
+        // if (scene.classList.contains('sleep')) {
+        //     scene.classList.add('active');
+        // }
+
+        // if (scene.classList.contains('night')) {
+        //     scene.classList.toggle('active');
+        // }
     })
 });
 
@@ -82,7 +92,7 @@ const closeModal = () => {
 
     setTimeout(()=>{
         microphoneModalContainer.classList.add('hide');
-    }, 500)
+    }, 300)
 }
 
 microphoneBtn.addEventListener('click', () => {
@@ -97,4 +107,12 @@ microphoneBtn.addEventListener('click', () => {
 
 microphoneModalContainer.addEventListener('click', () => {
     closeModal();
+})
+
+const contextMenuBtn = document.getElementById('context-menu');
+const contextMenuContainer = document.querySelector('.contextual-menu');
+
+contextMenuBtn.addEventListener('click', () => {
+    contextMenuContainer.classList.toggle('anim-move-up');
+    contextMenuContainer.classList.toggle('hide');
 })

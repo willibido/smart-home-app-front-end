@@ -1,0 +1,26 @@
+.contextual-menu {
+    position: absolute;
+    top: 11%;
+    background-color: #fff;
+    border-radius: .8rem;
+    z-index: 1;
+
+    &__container {
+        list-style: none;
+        color: #282828;
+
+        .item {
+            padding: 2.5rem 3rem;
+            cursor: pointer;
+            font-size: 1.8rem;
+
+            i {
+                margin-right: 1rem;
+            }
+
+            &:hover {
+                background-color: #2222220c;
+            }
+        }
+    }
+}

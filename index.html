@@ -17,6 +17,7 @@
                 <div id="microphone_modal" class="microphone modal">
                     <div class="icon-container">
                         <i class="fas fa-microphone"></i>
+                        <p class="u-margin-top-small">Recording...</p>
                     </div>
                 </div>
                 <div class="modal-overlay"></div>
@@ -44,7 +45,16 @@
             <section class="dashboard u-margin-bottom-small">
                 <section class="dashboard__head u-both-sides-p">
                     <div class="dashboard__head__top-bar u-margin-bottom-small">
-                        <button class="btn btn--round btn--small"><i class="fas fa-chevron-down"></i></button>
+                        <button id="context-menu" class="btn btn--round btn--small"><i class="fas fa-chevron-down"></i></button>
+
+                        <div class="contextual-menu hide">
+                            <ul class="contextual-menu__container">
+                                <li class="item"><i class="fas fa-plug"></i> Devices</li>
+                                <li class="item"><i class="far fa-window-restore"></i> Scenes</li>
+                                <li class="item"><i class="fas fa-users"></i> Users</li>
+                            </ul>
+                        </div>
+
                         <span class="time"><i class="fas fa-moon"></i> Oct.26th</span>
                         <div class="user-account">
                             <img class="avatar" src="src/assets/img/avatar.png" alt="">
