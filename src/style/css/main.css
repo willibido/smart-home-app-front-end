@@ -1,3 +1,59 @@
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 5rem rgba(244, 67, 54, 0.5); }
+  50% {
+    box-shadow: 0 0 8rem #f44336; }
+  100% {
+    box-shadow: 0 0 5rem rgba(244, 67, 54, 0.5); } }
+
+@keyframes circle-pulse {
+  0% {
+    transform: scale(0);
+    opacity: 1; }
+  100% {
+    transform: scale(3);
+    opacity: 0; } }
+
+@keyframes move-up {
+  0% {
+    transform: translateY(20rem);
+    opacity: 0; }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1; } }
+
+.anim-move-up {
+  animation: move-up 0.5s cubic-bezier(0.65, 0.05, 0.36, 1) forwards; }
+
+@keyframes move-down {
+  0% {
+    transform: translateY(0rem);
+    opacity: 1; }
+  100% {
+    transform: translateY(20rem);
+    opacity: 0; } }
+
+.anim-move-down {
+  animation: move-down 0.5s cubic-bezier(0.65, 0.05, 0.36, 1) backwards; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+.fade-in {
+  animation: fade-in 0.5s cubic-bezier(0.65, 0.05, 0.36, 1) forwards; }
+
+@keyframes fade-out {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.fade-out {
+  animation: fade-out 0.5s cubic-bezier(0.65, 0.05, 0.36, 1) backwards; }
+
 *,
 *::before,
 *::after {
@@ -79,21 +135,30 @@ body {
   display: block; }
 
 .u-bg-red {
-  background-color: #F44336 !important; }
+  background-color: #F44336 !important;
+  transition: all .2s ease; }
 
 .u-bg-blue {
-  background-color: #3D5AFE !important; }
+  background-color: #3D5AFE !important;
+  transition: all .2s ease; }
 
 .u-bg-violet {
-  background-color: #651FFF !important; }
+  background-color: #651FFF !important;
+  transition: all .2s ease; }
 
 .u-bg-green {
-  background-color: #00C853 !important; }
+  background-color: #00C853 !important;
+  transition: all .2s ease; }
 
 .u-bg-orange {
-  background-color: #FF9100 !important; }
+  background-color: #FF9100 !important;
+  transition: all .2s ease; }
+
+.hide {
+  display: none; }
 
 .navbar {
+  z-index: 2000;
   position: absolute;
   background-color: #1D1D1D;
   height: 120px;
@@ -210,7 +275,8 @@ body {
       border-radius: 6rem;
       margin-bottom: 2rem;
       height: 5.7rem;
-      width: 5.7rem; }
+      width: 5.7rem;
+      transition: all .2s ease; }
     .scenes .scene.movie.active {
       background-color: #00C853; }
       .scenes .scene.movie.active .scene__icon {
@@ -315,6 +381,52 @@ body {
       margin-bottom: 1rem; }
     .devices-wrapper .device__col .device:nth-of-type(even) {
       margin-bottom: 1rem; }
+
+.modal-container {
+  z-index: 900; }
+  .modal-container .modal {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1100;
+    transition: all .2s ease; }
+    .modal-container .modal .icon-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #1D1D1D;
+      width: 30rem;
+      height: 30rem;
+      border-radius: 1.2rem; }
+      .modal-container .modal .icon-container i {
+        position: relative;
+        background-color: #F44336;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        height: 9rem;
+        width: 9rem;
+        padding: 3rem;
+        border-radius: 50%;
+        animation: shadow-pulse 1.5s ease-in-out infinite backwards; }
+        .modal-container .modal .icon-container i::after {
+          border-radius: 50%;
+          position: absolute;
+          content: '';
+          width: 120%;
+          height: 120%;
+          border: 0.2rem solid #F44336;
+          animation: circle-pulse 1.6s ease-in-out infinite backwards; }
+  .modal-container .modal-overlay {
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: #030303bd;
+    filter: blur(10px); }
 
 .dashboard {
   background-color: #1D1D1D; }

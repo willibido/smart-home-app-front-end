@@ -1,0 +1,57 @@
+.modal-container {
+    z-index: 900;
+
+    .modal {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1100;
+        transition: all .2s ease;
+
+        .icon-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $navbar-color;
+            width: 30rem;
+            height: 30rem;
+            border-radius: 1.2rem;
+
+            i {
+                position: relative;
+                background-color: $red-color;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.5rem;
+                // border: $simple-border;
+                height: 9rem;
+                width: 9rem;
+                padding: 3rem;
+                border-radius: 50%;
+                animation: shadow-pulse 1.5s ease-in-out infinite backwards;
+
+                &::after {
+                    border-radius: 50%;
+                    position: absolute;
+                    content: '';
+                    width: 120%;
+                    height: 120%;
+                    border: .2rem solid $red-color;
+                    animation: circle-pulse 1.6s ease-in-out infinite backwards;
+                }
+            }
+        }
+    }
+
+    .modal-overlay {
+        height: 100vh;
+        width: 100%;
+        position: absolute;
+        background-color: #030303bd;
+        filter: blur(10px);
+    }
+}

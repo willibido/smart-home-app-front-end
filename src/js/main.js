@@ -55,3 +55,46 @@ scenes.forEach(scene => {
         }
     })
 });
+
+const microphoneModalContainer = document.querySelector('.modal-container');
+const microphoneBtn = document.getElementById('microphone');
+const microphoneModal = document.getElementById('microphone_modal');
+const modalOverlay = document.querySelector('.modal-overlay');
+
+const openModal = () => {
+    modalOverlay.classList.remove('fade-out');
+    microphoneModal.classList.remove('fade-out');
+    
+    microphoneModalContainer.classList.remove('hide');
+    
+    modalOverlay.classList.add('fade-in');
+
+    microphoneModal.classList.add('anim-move-up');
+    microphoneModal.classList.remove('anim-move-down');
+}
+
+const closeModal = () => {
+    modalOverlay.classList.remove('fade-in');
+    modalOverlay.classList.add('fade-out');
+
+    microphoneModal.classList.remove('anim-move-up');
+    microphoneModal.classList.add('anim-move-down');
+
+    setTimeout(()=>{
+        microphoneModalContainer.classList.add('hide');
+    }, 500)
+}
+
+microphoneBtn.addEventListener('click', () => {
+    if (microphoneModalContainer.classList.contains('hide')) {
+        openModal();
+        console.log('Open');
+    } else {
+        closeModal();
+        console.log('Close');
+    }
+})
+
+microphoneModalContainer.addEventListener('click', () => {
+    closeModal();
+})

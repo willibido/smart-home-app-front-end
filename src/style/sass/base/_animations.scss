@@ -1,0 +1,78 @@
+@keyframes shadow-pulse {
+    0% {
+        box-shadow: 0 0 5rem rgba($color: $red-color, $alpha: .5);
+    }
+    50%{
+        box-shadow: 0 0 8rem rgba($color: $red-color, $alpha: 1.0);
+    }
+    100%{
+        box-shadow: 0 0 5rem rgba($color: $red-color, $alpha: .5);
+    }
+}
+
+@keyframes circle-pulse {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }    
+}
+
+// MOVE UP
+
+@keyframes move-up {
+    0% {
+        transform: translateY(20rem);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0rem);
+        opacity: 1;
+    } 
+}
+
+.anim-move-up {animation: move-up .5s cubic-bezier(0.65,0.05,0.36,1) forwards;}
+
+// MOVE DOWN
+
+@keyframes move-down {
+    0% {
+        transform: translateY(0rem);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20rem);
+        opacity: 0;
+    } 
+}
+
+.anim-move-down {animation: move-down .5s cubic-bezier(0.65,0.05,0.36,1) backwards;}
+
+// FADE IN
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    } 
+}
+
+.fade-in {animation: fade-in .5s cubic-bezier(0.65,0.05,0.36,1) forwards;}
+
+// FADE OUT
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    } 
+}
+
+.fade-out {animation: fade-out .5s cubic-bezier(0.65,0.05,0.36,1) backwards;}

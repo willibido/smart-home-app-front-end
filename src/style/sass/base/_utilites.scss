@@ -38,8 +38,10 @@
 //      COLOR       |
 // =================|
 
-.u-bg-red { background-color: $red-color !important; }
-.u-bg-blue { background-color: $primary-color !important; }
-.u-bg-violet { background-color: $violet-color !important; }
-.u-bg-green { background-color: $green-color !important; }
-.u-bg-orange { background-color: $orange-color !important; }
+.u-bg-red { background-color: $red-color !important; transition: all .2s ease; }
+.u-bg-blue { background-color: $primary-color !important; transition: all .2s ease; }
+.u-bg-violet { background-color: $violet-color !important; transition: all .2s ease; }
+.u-bg-green { background-color: $green-color !important; transition: all .2s ease; }
+.u-bg-orange { background-color: $orange-color !important; transition: all .2s ease; }
+
+.hide { display: none; }

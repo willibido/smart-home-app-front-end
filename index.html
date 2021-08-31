@@ -13,6 +13,15 @@
 <body>
     <div class="app-container u-margin-top-medium">
         <div class="inner-container">
+            <div class="modal-container hide">
+                <div id="microphone_modal" class="microphone modal">
+                    <div class="icon-container">
+                        <i class="fas fa-microphone"></i>
+                    </div>
+                </div>
+                <div class="modal-overlay"></div>
+            </div>
+
             <!-- NAVEGATION BAR -->
             <nav class="navbar">
                 <div class="navbar__controls-container">
@@ -26,7 +35,7 @@
                         <button class="btn btn--round"><i class="fas fa-sitemap"></i></button>
                     </div>
                     <div class="control">
-                        <button class="btn btn--round btn--bordered btn--recorder"><i class="fas fa-microphone sized"></i></button>
+                        <button id="microphone" class="btn btn--round btn--bordered btn--recorder"><i class="fas fa-microphone sized"></i></button>
                     </div>
                 </div>
             </nav>
