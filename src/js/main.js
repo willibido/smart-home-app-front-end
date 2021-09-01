@@ -111,8 +111,31 @@ microphoneModalContainer.addEventListener('click', () => {
 
 const contextMenuBtn = document.getElementById('context-menu');
 const contextMenuContainer = document.querySelector('.contextual-menu');
+const appContainer = document.querySelector('.app-container');
+let menuIsOpen = false;
 
-contextMenuBtn.addEventListener('click', () => {
-    contextMenuContainer.classList.toggle('anim-move-up');
-    contextMenuContainer.classList.toggle('hide');
+const closeCotextualMenu = () => {
+    contextMenuContainer.classList.remove('anim-move-up');
+    contextMenuContainer.classList.add('hide');
+    
+    menuIsOpen = false;
+
+    console.log('Close?', 'MENU IS OPEN: ', menuIsOpen);
+}
+
+const openCotextualMenu = () => {
+    contextMenuContainer.classList.add('anim-move-up');
+    contextMenuContainer.classList.remove('hide');
+    
+    menuIsOpen = true;
+
+    console.log('Open?', 'MENU IS OPEN: ', menuIsOpen);
+}
+
+contextMenuBtn.addEventListener('mouseover', () => {
+    openCotextualMenu();
+})
+
+appContainer.addEventListener('click', () => {
+    closeCotextualMenu();
 })
