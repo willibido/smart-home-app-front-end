@@ -117,25 +117,17 @@ let menuIsOpen = false;
 const closeCotextualMenu = () => {
     contextMenuContainer.classList.remove('anim-move-up');
     contextMenuContainer.classList.add('hide');
-    
-    menuIsOpen = false;
-
-    console.log('Close?', 'MENU IS OPEN: ', menuIsOpen);
 }
 
 const openCotextualMenu = () => {
     contextMenuContainer.classList.add('anim-move-up');
     contextMenuContainer.classList.remove('hide');
-    
-    menuIsOpen = true;
-
-    console.log('Open?', 'MENU IS OPEN: ', menuIsOpen);
 }
 
-contextMenuBtn.addEventListener('mouseover', () => {
+contextMenuBtn.addEventListener('click', () => {
     openCotextualMenu();
 })
 
 appContainer.addEventListener('click', () => {
     closeCotextualMenu();
-})
+}, true)
